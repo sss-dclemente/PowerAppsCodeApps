@@ -1,0 +1,118 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* tokens.spacingVerticalL equivalent */
+}
+
+.header {
+  margin-bottom: 16px; /* tokens.spacingVerticalM equivalent */
+}
+
+.title {
+  font-size: 28px; /* tokens.fontSizeHero700 equivalent */
+  font-weight: 600; /* tokens.fontWeightSemibold equivalent */
+  color: var(--colorNeutralForeground1);
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px; /* tokens.spacingHorizontalM equivalent */
+  margin-bottom: 24px; /* tokens.spacingVerticalL equivalent */
+}
+
+.statCard {
+  padding: 16px; /* tokens.spacingVerticalM equivalent */
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--colorNeutralBackground1);
+  border: 1px solid var(--colorNeutralStroke2);
+  border-radius: 8px;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statCard:active {
+  transform: translateY(0);
+}
+
+.statHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* tokens.spacingHorizontalS equivalent */
+  margin-bottom: 8px; /* tokens.spacingVerticalS equivalent */
+}
+
+.statIcon {
+  color: var(--colorBrandForeground1);
+}
+
+.statValue {
+  font-size: 32px; /* tokens.fontSizeHero800 equivalent */
+  font-weight: 600; /* tokens.fontWeightSemibold equivalent */
+  color: var(--colorNeutralForeground1);
+  line-height: 1.25; /* tokens.lineHeightHero800 equivalent */
+}
+
+.statLabel {
+  color: var(--colorNeutralForeground2);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px; /* tokens.spacingHorizontalM equivalent */
+}
+
+.sectionCard {
+  padding: 16px; /* tokens.spacingVerticalM equivalent */
+  min-height: 200px;
+}
+
+.sectionTitle {
+  font-size: 16px; /* tokens.fontSizeBase400 equivalent */
+  font-weight: 600; /* tokens.fontWeightSemibold equivalent */
+  margin-bottom: 16px; /* tokens.spacingVerticalM equivalent */
+  color: var(--colorNeutralForeground1);
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0; /* tokens.spacingVerticalS equivalent */
+  border-bottom: 1px solid var(--colorNeutralStroke2);
+}
+
+.itemName {
+  color: var(--colorNeutralForeground1);
+}
+
+.itemValue {
+  color: var(--colorNeutralForeground2);
+  font-weight: 600; /* tokens.fontWeightSemibold equivalent */
+}
+
+.warningItem {
+  color: var(--colorPaletteRedForeground1);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .statCard {
+  background: var(--colorNeutralBackground2);
+  border-color: var(--colorNeutralStroke1);
+}
+
+[data-theme="dark"] .statCard:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}

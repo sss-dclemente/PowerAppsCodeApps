@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  min-width: 250px;
+}
+
+.dataGridContainer {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid var(--colorNeutralStroke2);
+  border-radius: 6px;
+}
+
+.dataGrid {
+  width: 100%;
+  min-width: 800px;
+}
+
+.assetNameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.serialNumber {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.statusBadge {
+  min-width: 80px;
+}
+
+.valueCell {
+  text-align: right;
+}
+
+.footer {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    min-width: unset;
+  }
+
+  .dataGrid {
+    min-width: 600px;
+  }
+}

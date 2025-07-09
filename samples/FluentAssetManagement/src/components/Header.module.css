@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px; /* tokens.spacingVerticalM tokens.spacingHorizontalL equivalent */
+  background-color: var(--colorNeutralBackground2);
+  border-bottom: 1px solid var(--colorNeutralStroke2);
+  min-height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 16px; /* tokens.spacingHorizontalM equivalent */
+}
+
+.hamburgerButton {
+  min-width: auto;
+  padding: 8px; /* tokens.spacingVerticalS equivalent */
+}
+
+.navigationControls {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* tokens.spacingHorizontalXS equivalent */
+  margin-left: 16px; /* tokens.spacingHorizontalM equivalent */
+}
+
+.navControlButton {
+  min-width: 36px;
+  height: 32px;
+}
+
+.title {
+  font-size: 20px; /* tokens.fontSizeBase600 equivalent */
+  font-weight: 600; /* tokens.fontWeightSemibold equivalent */
+  color: var(--colorNeutralForeground1);
+  margin: 0;
+  flex: 1;
+}

@@ -1,0 +1,57 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 16px; /* tokens.spacingVerticalL tokens.spacingHorizontalM equivalent */
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* tokens.spacingVerticalS equivalent */
+  flex: 1;
+}
+
+.navButton {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100%;
+  padding-left: 16px; /* tokens.spacingHorizontalM equivalent */
+  padding-right: 16px; /* tokens.spacingHorizontalM equivalent */
+}
+
+/* Target Fluent UI button internal structure */
+.navButton :global(.fui-Button__content) {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100%;
+}
+
+.navButton :global(.fui-Button__icon) {
+  margin-right: 8px !important;
+}
+
+/* Alternative targeting for button content alignment */
+.navButton > * {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100%;
+}
+
+.activeNavButton {
+  background-color: var(--colorBrandBackground2);
+  color: var(--colorBrandForeground2);
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px; /* tokens.spacingVerticalM equivalent */
+  background-color: var(--colorNeutralBackground2);
+  border-top: 1px solid var(--colorNeutralStroke2);
+}
+
+.mobileNavButton {
+  min-width: auto;
+  padding: 8px; /* tokens.spacingVerticalS equivalent */
+}

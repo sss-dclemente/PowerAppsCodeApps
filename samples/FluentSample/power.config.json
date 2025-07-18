@@ -1,0 +1,30 @@
+{
+  "appId": "08f6edbd-1c90-420f-9587-febe9912e588",
+  "appDisplayName": "Fluent Sample",
+  "description": null,
+  "environmentId": "8a58c200-dead-e5ee-aa9f-7341ca2e1b02",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "logoPath": ".\\public\\PowerApps_scalable.svg",
+  "localAppUrl": "http://localhost:3000/",
+  "connectionReferences": {
+    "0cd30614-54a8-4ae0-abce-22367daba761": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "projects"
+      ],
+      "authenticationType": "sqlAuthentication",
+      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/472d0d9acf9b42369fb9855a6a948eb1",
+      "dataSets": {
+        "sql-marcelbf-dev.database.windows.net, sqldb-marcelbf-dev": {
+          "dataSources": {
+            "projects": {
+              "tableName": "[dbo].[Projects]"
+            }
+          }
+        }
+      }
+    }
+  }
+}

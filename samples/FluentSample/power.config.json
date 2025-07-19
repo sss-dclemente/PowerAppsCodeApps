@@ -1,30 +1,22 @@
 {
-  "appId": "08f6edbd-1c90-420f-9587-febe9912e588",
-  "appDisplayName": "Fluent Sample",
+  "appId": "cc9be68d-b030-496a-99ad-9403b61a3423",
+  "appDisplayName": "Fluent sample",
   "description": null,
-  "environmentId": "8a58c200-dead-e5ee-aa9f-7341ca2e1b02",
+  "environmentId": "b3558901-82b3-e555-951f-693a26fd4f1e",
   "buildPath": "./dist",
   "buildEntryPoint": "index.html",
-  "logoPath": ".\\public\\PowerApps_scalable.svg",
+  "logoPath": "Default",
   "localAppUrl": "http://localhost:3000/",
   "connectionReferences": {
-    "0cd30614-54a8-4ae0-abce-22367daba761": {
-      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
-      "displayName": "SQL Server",
+    "4db3fef4-5904-4afa-8a61-b2627a04e45c": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_asset-20management-20test-20api-5f39671246a0d64-c6fc231539dd189f",
+      "displayName": "Asset Management Test API",
       "dataSources": [
-        "projects"
+        "asset-20management-20test-20api-5f39671246a0d64-c6fc231539dd189f"
       ],
-      "authenticationType": "sqlAuthentication",
-      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/472d0d9acf9b42369fb9855a6a948eb1",
-      "dataSets": {
-        "sql-marcelbf-dev.database.windows.net, sqldb-marcelbf-dev": {
-          "dataSources": {
-            "projects": {
-              "tableName": "[dbo].[Projects]"
-            }
-          }
-        }
-      }
+      "authenticationType": null,
+      "sharedConnectionId": null,
+      "dataSets": {}
     }
   }
 }

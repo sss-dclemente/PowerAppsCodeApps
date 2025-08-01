@@ -301,39 +301,39 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     path: '/',
-    label: 'Home',
-    description: 'Welcome and overview',
+    label: 'Dashboard',
+    description: 'Analytics and overview',
     icon: <HomeRegular />,
     iconFilled: <HomeFilled />,
   },
   {
-    path: '/office365',
-    label: 'Office 365',
-    description: 'User profiles and directory',
-    icon: <PeopleRegular />,
-    iconFilled: <PeopleFilled />,
-  },
-  {
-    path: '/sql',
-    label: 'SQL Database',
-    description: 'Project management with DataGrid and pagination',
+    path: '/time-entry',
+    label: 'Time Entry',
+    description: 'Enter and view your time',
     icon: <DatabaseRegular />,
     iconFilled: <DatabaseFilled />,
   },
   {
-    path: '/custom-api',
-    label: 'Custom API',
-    description: 'Custom connector template',
+    path: '/approvals',
+    label: 'Approvals',
+    description: 'Manager approval workflow',
+    icon: <PeopleRegular />,
+    iconFilled: <PeopleFilled />,
+  },
+  {
+    path: '/admin',
+    label: 'Admin',
+    description: 'Admin features',
     icon: <CloudRegular />,
     iconFilled: <CloudFilled />,
   },
 ];
 
 const routeNames: Record<string, string> = {
-  '/': 'Home',
-  '/office365': 'Office 365 Connector',
-  '/sql': 'SQL Database Connector', 
-  '/custom-api': 'Custom API Connector'
+  '/': 'Dashboard',
+  '/time-entry': 'Time Entry',
+  '/approvals': 'Approvals',
+  '/admin': 'Admin',
 };
 
 interface LayoutProps {

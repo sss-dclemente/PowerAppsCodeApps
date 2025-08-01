@@ -1,13 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
-import { makeStyles, shorthands, tokens, Spinner } from '@fluentui/react-components'
-import { lazy, Suspense } from 'react'
-import Layout from './components/Layout'
-import HomePage from './pages/HomePage'
 
-// Lazy load pages for code splitting
-const Office365Page = lazy(() => import('./pages/Office365Page'))
-const SqlPage = lazy(() => import('./pages/SqlPage'))
-const CustomApiPage = lazy(() => import('./pages/CustomApiPage'))
+import { makeStyles, shorthands, tokens } from '@fluentui/react-components';
+import Layout from './components/Layout';
+import AppRoutes from './routes';
 
 const useStyles = makeStyles({
   root: {
@@ -16,37 +10,17 @@ const useStyles = makeStyles({
     minHeight: '100vh',
     backgroundColor: tokens.colorNeutralBackground1,
   },
-  loadingContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '200px',
-  },
 });
 
 function App() {
   const styles = useStyles();
-
-  const LoadingFallback = () => (
-    <div className={styles.loadingContainer}>
-      <Spinner size="medium" label="Loading page..." />
-    </div>
-  );
-
   return (
     <div className={styles.root}>
       <Layout>
-        <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/office365" element={<Office365Page />} />
-            <Route path="/sql" element={<SqlPage />} />
-            <Route path="/custom-api" element={<CustomApiPage />} />
-          </Routes>
-        </Suspense>
+        <AppRoutes />
       </Layout>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

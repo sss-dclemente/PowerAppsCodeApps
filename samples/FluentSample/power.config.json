@@ -1,0 +1,12 @@
+{
+  "appId": "",
+  "appDisplayName": "PSASUITE",
+  "description": null,
+  "environmentId": "Default-33ec73e8-7d18-42f2-beb3-fbd4df9f5aa3",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "logoPath": "Default",
+  "localAppUrl": "http://localhost:3000/",
+  "connectionReferences": {},
+  "databaseReferences": {}
+}

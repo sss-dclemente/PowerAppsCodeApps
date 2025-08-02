@@ -1,12 +1,25 @@
 import React, { createContext, useContext, useState } from "react";
 
-const PreferencesContext = createContext({
+export type UserPreferences = {
+  defaultProject?: string;
+  defaultHoursPerDay?: string;
+  defaultLocation?: string;
+  theme?: string;
+  notifications?: boolean;
+};
+
+type PreferencesContextType = {
+  preferences: UserPreferences;
+  setPreferences: (prefs: UserPreferences) => void;
+};
+
+const PreferencesContext = createContext<PreferencesContextType>({
   preferences: {},
-  setPreferences: (prefs: any) => {},
+  setPreferences: () => {},
 });
 
 export const PreferencesProvider = ({ children }: { children: React.ReactNode }) => {
-  const [preferences, setPreferences] = useState({});
+  const [preferences, setPreferences] = useState<UserPreferences>({});
   return (
     <PreferencesContext.Provider value={{ preferences, setPreferences }}>
       {children}

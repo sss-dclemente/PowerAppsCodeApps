@@ -327,6 +327,13 @@ const navItems: NavItem[] = [
     icon: <CloudRegular />,
     iconFilled: <CloudFilled />,
   },
+  {
+    path: '/settings',
+    label: 'Settings',
+    description: 'User preferences and defaults',
+    icon: <WeatherSunnyRegular />,
+    iconFilled: <WeatherMoonRegular />,
+  },
 ];
 
 const routeNames: Record<string, string> = {
@@ -334,6 +341,7 @@ const routeNames: Record<string, string> = {
   '/time-entry': 'Time Entry',
   '/approvals': 'Approvals',
   '/admin': 'Admin',
+  '/settings': 'Settings',
 };
 
 interface LayoutProps {
